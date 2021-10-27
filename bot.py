@@ -28,8 +28,9 @@ async def echo(message: types.Message):
 
     if message.text.lower() == '5':
         await message.answer('Fuck you.')
-        if message.text.lower() == '5':
-            await message.answer('Fuck you.')
+    else:
+        if message.text.lower() == '8':
+            await message.answer('Hello!.')
         else:
             await message.answer(b*10)
 
