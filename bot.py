@@ -28,8 +28,10 @@ async def echo(message: types.Message):
 
     if message.text.lower() == '5':
         await message.answer('Fuck you.')
-    else:
-        await message.answer(b*5)
+        if message.text.lower() == '5':
+            await message.answer('Fuck you.')
+        else:
+            await message.answer(b*10)
 
 
 async def noon_print():
