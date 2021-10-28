@@ -24,15 +24,15 @@ async def send_welcome(message: types.Message):
 
 @dp.message_handler()
 async def echo(message: types.Message):
-    """b = int(message.text)"""
+    b = int(message.text)
 
-    if message.text.lower() == "x":
+    if message.text.lower() == "0":
         await message.answer('Fuck you.')
     else:
         if message.text.lower() == '1':
             await message.answer('Hello!.')
         else:
-            await message.answer(10)
+            await message.answer(6*b)
 
 
 async def noon_print():
