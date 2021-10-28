@@ -36,11 +36,13 @@ async def echo(message: types.Message):
 
 
 async def noon_print():
-    print("It's noon!")
+    async def echo(message: types.Message):
+
+        await message.answer('Hello!.')
 
 
 async def scheduler():
-    aioschedule.every().day.at("13:50").do(noon_print)
+    aioschedule.every().day.at("15:24").do(noon_print)
     while True:
         await aioschedule.run_pending()
         await asyncio.sleep(1)
@@ -48,6 +50,7 @@ async def scheduler():
 
 async def on_startup(_):
     asyncio.create_task(scheduler())
+
 
 # запускаем лонг поллинг
 if __name__ == '__main__':
