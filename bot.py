@@ -24,9 +24,9 @@ async def send_welcome(message: types.Message):
 
 @dp.message_handler()
 async def echo(message: types.Message):
-    b = int(message.text)
+    """b = int(message.text)"""
 
-    if message.text.lower() == '0':
+    if message.text.lower() == "x":
         await message.answer('Fuck you.')
     else:
         if message.text.lower() == '1':
