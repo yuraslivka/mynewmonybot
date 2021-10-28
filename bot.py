@@ -26,23 +26,21 @@ async def send_welcome(message: types.Message):
 async def echo(message: types.Message):
     b = int(message.text)
 
-    if message.text.lower() == '5':
+    if message.text.lower() == 'f':
         await message.answer('Fuck you.')
     else:
-        if message.text.lower() == '8':
+        if message.text.lower() == 'h':
             await message.answer('Hello!.')
         else:
             await message.answer(b*10)
 
 
 async def noon_print():
-    async def echo(message: types.Message):
-
-        await message.answer('Hello!.')
+    print("It's noon!")
 
 
 async def scheduler():
-    aioschedule.every().day.at("15:24").do(noon_print)
+    aioschedule.every().day.at("13:50").do(noon_print)
     while True:
         await aioschedule.run_pending()
         await asyncio.sleep(1)
