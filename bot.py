@@ -26,7 +26,7 @@ async def send_welcome(message: types.Message):
 async def echo(message: types.Message):
     b = int(message.text)
 
-    if message.text.lower() == '0':
+    if message.text.lower() == '/F':
         await message.answer('Fuck you.')
     else:
         if message.text.lower() == '1':
