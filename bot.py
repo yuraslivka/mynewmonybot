@@ -32,7 +32,7 @@ async def send_welcome(message: types.Message):
     await bot.send_message(message.from_user.id, 'fuck off:)')
 
 
-@dp.message_handler(commands=['h'])
+@dp.message_handler(commands=['USD'])
 async def send_welcome(message: types.Message):
 
     r = requests.get("https://finance.i.ua/bank/115/")
@@ -42,7 +42,7 @@ async def send_welcome(message: types.Message):
         title = el.select('span')
         print(title[4].text)
 
-    await bot.send_message(message.from_user.id, title[4].text + " "+title[1].text)
+    await bot.send_message(message.from_user.id, "USD " + title[4].text + " " + title[1].text)
 
 
 @dp.message_handler()
