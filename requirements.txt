@@ -2,3 +2,9 @@ aiogram
 asyncio
 requests
 bs4
+os.path
+re
+googleapiclient.discovery
+google_auth_oauthlib.flow
+google.auth.transport.requests
+google.oauth2.credentials
