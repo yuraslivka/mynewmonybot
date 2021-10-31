@@ -24,7 +24,6 @@ async def send_welcome(message: types.Message):
    This handler will be called when user sends `/start` or `/help` command
    """
     await bot.send_message(message.from_user.id, 'Hello Yurii', reply_markup=kb_client)
-    await message.reply("Hi!\nI'm EchoBot!\nPowered by Yurii!")
 
 
 @dp.message_handler(commands=['f'])
