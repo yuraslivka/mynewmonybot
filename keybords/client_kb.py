@@ -1,7 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 
-b1 = KeyboardButton('/f')
-b2 = KeyboardButton('/USD')
+b1 = KeyboardButton('f')
+b2 = KeyboardButton('USD')
 b3 = KeyboardButton('im here', request_location=True)
 b4 = KeyboardButton('1')
 

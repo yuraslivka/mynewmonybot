@@ -40,7 +40,7 @@ async def send_welcome(message: types.Message):
 
     for el in html.select('.data_container > table'):
         title = el.select('span')
-        print(title[4].text + " " + title[1].text)
+        await bot.send_message(message.from_user.id, title[4].text + " " + title[1].text)
 
 
 @dp.message_handler()
