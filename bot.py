@@ -32,6 +32,12 @@ async def send_welcome(message: types.Message):
     await bot.send_message(message.from_user.id, 'fuck off:)')
 
 
+@dp.message_handler(commands=['h'])
+async def send_welcome(message: types.Message):
+
+    await bot.send_message(message.from_user.id, 'magic &*&')
+
+
 @dp.message_handler()
 async def echo(message: types.Message):
     b = int(message.text)
