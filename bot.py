@@ -27,6 +27,12 @@ async def send_welcome(message: types.Message):
     await message.reply("Hi!\nI'm EchoBot!\nPowered by Yurii!")
 
 
+@dp.message_handler(commands=['f'])
+async def send_welcome(message: types.Message):
+
+    await bot.send_message(message.from_user.id, 'fuck off:)')
+
+
 @dp.message_handler()
 async def echo(message: types.Message):
     b = int(message.text)

@@ -3,6 +3,6 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemo
 b1 = KeyboardButton('/f')
 b2 = KeyboardButton('/h')
 
-kb_client = ReplyKeyboardMarkup()
+kb_client = ReplyKeyboardMarkup(resize_keyboard=True)
 
-kb_client.add(b1).add(b2)
+kb_client.add(b1).insert(b2)
