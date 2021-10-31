@@ -2,7 +2,7 @@ aiogram
 asyncio
 requests
 bs4
-os.path
+os
 re
 googleapiclient.discovery
 google_auth_oauthlib.flow
