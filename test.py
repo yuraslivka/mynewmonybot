@@ -6,4 +6,4 @@ html = BS(r.content, 'html.parser')
 
 for el in html.select('.data_container > table'):
     title = el.select('span')
-    print(title[4].text)
+    print(title[1].text)
