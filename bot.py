@@ -3,7 +3,11 @@ import logging
 import asyncio
 import aioschedule
 from datetime import datetime
-from aiogram import Bot, Dispatcher, executor, types
+from aiogram import Bot, types
+from aiogram.dispatcher import Dispatcher
+from aiogram.utils import executor
+from keybords import kb_client
+import os
 
 
 # задаем уровень логов
@@ -19,6 +23,7 @@ async def send_welcome(message: types.Message):
     """
    This handler will be called when user sends `/start` or `/help` command
    """
+    await bot.send_message(message.from_user.id, 'Hello Yurii', reply_markup=kb_client)
     await message.reply("Hi!\nI'm EchoBot!\nPowered by Yurii!")
 
 
